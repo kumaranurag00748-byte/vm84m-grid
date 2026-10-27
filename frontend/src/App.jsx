@@ -12,7 +12,8 @@ import {
   YAxis,
 } from "recharts";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const rawUrl = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? "" : "http://localhost:8000");
+const API_URL = rawUrl.replace(/^["']|["']$/g, "").replace(/\/+$/, "").trim();
 
 function formatNumber(value, suffix = "") {
   return value == null ? "—" : `${Number(value).toLocaleString(undefined, { maximumFractionDigits: 1 })}${suffix}`;
