@@ -81,3 +81,6 @@ This prototype was developed with AI assistance (GitHub Copilot SDK in VS Code) 
 ## Deployment
 
 The project is containerized and can be deployed to any service supporting Docker. For a hosted split deployment, set `VITE_API_URL` at frontend build time to the public backend URL and restrict backend CORS to the deployed frontend origin. Provider credentials and a public repository are intentionally not included in this local-ready project.
+
+## Deployment link (Vercel)
+https://vm84m-grid.vercel.app/
